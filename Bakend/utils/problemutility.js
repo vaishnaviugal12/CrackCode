@@ -16,7 +16,7 @@ const getLanguageId = (lang)=>{
 
 const submitBatch = async (submissions) => {
   if (!submissions || !Array.isArray(submissions) || submissions.length === 0) {
-    console.error("❌ submitBatch error: No submissions provided.");
+    console.error(" submitBatch error: No submissions provided.");
     throw new Error("There should be at least one submission in a batch");
   }
 
@@ -34,10 +34,10 @@ const submitBatch = async (submissions) => {
 
   try {
     const response = await axios.request(options);
-    console.log("✅ Judge0 raw response:", response.data);
+    console.log(" Judge0 raw response:", response.data);
     return response.data;
   } catch (error) {
-    console.error("❌ Judge0 submitBatch failed:", error);
+    console.error(" Judge0 submitBatch failed:", error);
     throw error;
   }
 };
